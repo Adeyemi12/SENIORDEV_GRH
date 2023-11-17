@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/fullcercle"
+        android:layout_width="126dp"
+        android:layout_height="112dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginBottom="619dp"
+        android:contentDescription="@string/full_cercle"
+        android:src="@drawable/full_cerlce" />
+
+    <ImageView
+        android:id="@+id/fullcercle2"
+        android:layout_width="123dp"
+        android:layout_height="128dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="278dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="378dp"
+        android:contentDescription="@string/full_cercle"
+        android:src="@drawable/full_cerlce" />
+
+    <ImageView
+        android:id="@+id/fullcercle3"
+        android:layout_width="167dp"
+        android:layout_height="163dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-77dp"
+        android:layout_marginBottom="-81dp"
+        android:contentDescription="@string/full_cercle"
+        android:src="@drawable/full_cerlce" />
+
+    <ImageView
+        android:id="@+id/logoWelcome"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="65dp"
+        android:contentDescription="@string/Welcome_logo"
+        android:src="@drawable/icon_welcome" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="275dp"
+        android:text="Gestions des ressources \nhumaines en entreprise\n                 (GRH)"
+        android:textSize="25dp"
+        />
+
+    <ImageButton
+        android:id="@+id/button_signup"
+        android:layout_width="203dp"
+        android:layout_height="56dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="99dp"
+        android:layout_marginBottom="178dp"
+        android:padding="30dp"
+        android:src="@drawable/login_up" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:text="Already a member?"
+        />
+
+    <TextView
+        android:id="@+id/button_signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="73dp"
+        android:text="Sign in"
+        android:textColor="#2555FF"/>
+
+
+
+</RelativeLayout>
