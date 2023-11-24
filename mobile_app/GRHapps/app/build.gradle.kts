@@ -40,4 +40,5 @@ dependencies {
     implementation("androidx.cardview:cardview:1.0.0")
     implementation ("com.android.volley:volley:1.2.1")
     implementation ("org.json:json:20210307")
+    implementation ("org.mindrot:jbcrypt:0.4")
 }

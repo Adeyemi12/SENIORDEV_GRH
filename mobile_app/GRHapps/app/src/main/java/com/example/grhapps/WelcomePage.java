@@ -9,6 +9,9 @@ import android.text.TextWatcher;
 import android.widget.TextView;
 import android.widget.ImageView;
 
+import com.android.volley.toolbox.Volley;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 
 public class WelcomePage extends AppCompatActivity {
 
@@ -20,9 +23,47 @@ public class WelcomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_page);
 
+        /*check which bottom on tab bar was pressed */
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.bottom_Home);
+
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            if (item.getItemId() == R.id.bottom_Home) {
+                return true;
+            } else if (item.getItemId() == R.id.bottom_projects) {
+                startActivity(new Intent(getApplicationContext(), Projects.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                finish();
+                return true;
+            } else if (item.getItemId() == R.id.bottom_setting) {
+                startActivity(new Intent(getApplicationContext(), Settings.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                finish();
+                return true;
+            }  else if (item.getItemId() == R.id.bottom_profile) {
+                startActivity(new Intent(getApplicationContext(), Profile.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                finish();
+                return true;
+            } else if (item.getItemId() == R.id.bottom_trombi) {
+                    startActivity(new Intent(getApplicationContext(), Trombinoscope.class));
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    finish();
+                    return true;
+            } else {
+                return false;
+            }
+        });
+        /* check which bottom on tab bar was pressed (end) */
+
         welcomeUsername = findViewById(R.id.welcome_username);
         photoFrame = findViewById(R.id.photo_frame);
+        ApiRequestManager.initRequestQueue(Volley.newRequestQueue(getApplicationContext()));
 
+
+
+
+        /*Set user name*/
         welcomeUsername.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -51,13 +92,7 @@ public class WelcomePage extends AppCompatActivity {
                 welcomeUsername.requestLayout();
             }
         });
-
+        welcomeUsername.setText(GlobalVariables.UserNameApp);
         photoFrame.setImageResource(R.drawable.new_client);
-        mApi();
-    }
-
-    public void mApi() {
-        Intent intent = new Intent(this, ApiManagement.class);
-        startActivity(intent);
     }
 }

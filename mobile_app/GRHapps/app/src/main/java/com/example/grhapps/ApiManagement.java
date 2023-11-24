@@ -17,11 +17,12 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.mindrot.jbcrypt.BCrypt;
 
 public class ApiManagement extends AppCompatActivity {
     private RequestQueue mRequestQueue;
     private StringRequest mStringRequest;
-    private String url = "https://pokeapi.co/api/v2/pokemon/pikachu";
+    private String url = "https://be42-137-255-20-177.ngrok-free.app/api/userss/1";
     private TextView welcomeUsername;
 
 
@@ -47,23 +48,23 @@ public class ApiManagement extends AppCompatActivity {
 
 //                    String jsonString = jsonObject.toString();
 //                    Toast.makeText(getApplicationContext(), "Response :" + jsonString, Toast.LENGTH_LONG).show(); // Display the response on screen
-                    String name = jsonObject.getString("name");
+                    String name = jsonObject.getString("prenom");
                     JSONArray firstarrayjson = jsonObject.getJSONArray("abilities");
-
-                    for (int a = 0; a < firstarrayjson.length(); a++) {
-                        JSONObject abilityObject = firstarrayjson.getJSONObject(a);
-
-                        // Get the nested "ability" object
-                        JSONObject nestedAbilityObject = abilityObject.getJSONObject("ability");
-
-                        // Get the name and URL from the nested "ability" object
-                        String abilityName = nestedAbilityObject.getString("name");
-                        String abilityUrl = nestedAbilityObject.getString("url");
-
-                        // Do something with the extracted information (e.g., display in a toast)
-                        Toast.makeText(getApplicationContext(), "Ability Name: " + abilityName + "\nAbility URL: " + abilityUrl, Toast.LENGTH_LONG).show();
-                        Log.i("Ability Info", "Ability Name: " + abilityName + ", Ability URL: " + abilityUrl);
-                    }
+//
+//                    for (int a = 0; a < firstarrayjson.length(); a++) {
+//                        JSONObject abilityObject = firstarrayjson.getJSONObject(a);
+//
+//                        // Get the nested "ability" object
+//                        JSONObject nestedAbilityObject = abilityObject.getJSONObject("ability");
+//
+//                        // Get the name and URL from the nested "ability" object
+//                        String abilityName = nestedAbilityObject.getString("name");
+//                        String abilityUrl = nestedAbilityObject.getString("url");
+//
+//                        // Do something with the extracted information (e.g., display in a toast)
+//                        Toast.makeText(getApplicationContext(), "Ability Name: " + abilityName + "\nAbility URL: " + abilityUrl, Toast.LENGTH_LONG).show();
+//                        Log.i("Ability Info", "Ability Name: " + abilityName + ", Ability URL: " + abilityUrl);
+//                    }
 
                     welcomeUsername.setText(name);
 
@@ -81,4 +82,5 @@ public class ApiManagement extends AppCompatActivity {
 
         mRequestQueue.add(mStringRequest);
     }
+
 }
