@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="my_blue">#89A3FF</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_D2">#D2D2D2</color>
+    <color name="white_D9">#D9D9D9</color>
+    <string name="Sign_up">Sign up</string>
+    <string name="Welcome_logo">Welcome to app </string>
+    <string name="app_name">GRH apps</string>
+    <string name="full_cercle">full cercle</string>
+    <string name="login_button">Login button</string>
+    <string name="tab_bar"> Bottom Navigation</string>
+    <style name="Base.Theme.GRHApps" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="SlideActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+    </style>
+    <style name="Theme.GRHApps" parent="Base.Theme.GRHApps"/>
+</resources>

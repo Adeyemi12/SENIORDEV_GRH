@@ -1,0 +1,4 @@
+#Thu Nov 23 09:48:42 WAT 2023
+base.0=D\:\\Disque D\\EPITECH TEK3\\Alternance\\GRHapps\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeDexDebugAndroidTest\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

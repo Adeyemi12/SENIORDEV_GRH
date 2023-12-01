@@ -1,0 +1,4 @@
+#Fri Nov 24 17:54:53 WAT 2023
+base.0=D\:\\Disque D\\EPITECH TEK3\\Alternance\\GRHapps\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
