@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">GRH apps</string>
-    <string name="tab_bar"> Bottom Navigation</string>
-    <string name="Welcome_logo">Welcome to app </string>
-    <string name="login_button">Login button</string>
-    <string name="Sign_up">Sign up</string>
-    <string name="full_cercle">full cercle</string>
-</resources>
